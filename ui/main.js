@@ -1,15 +1,15 @@
-console.log('Loaded!');
-  // move the image
+//counter code
+document.getElementById("counter");
+var counter = 0 ; 
   
-  var img = document.getElementById('madi');
-  var marginLeft = 0;
-  function moveRight() {
-      marginLeft = marginLeft + 4;
-      img.style.marginLeft = marginLeft + 'px';
-  }
+button.onclick= function() {
+  //Make a Request to the counter endpoint  
   
-  img.onclick =  function() {
-      
-      var interval = setInterval(moveRight, 50);
-      
-      };
+  //Capture the response and store in a variable
+  
+ //Render it into a corrrect span tag
+ counter = counter + 1;
+ var span = getElementById("count");
+ span.innerHTML = counter.toString();
+    
+};
