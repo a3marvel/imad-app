@@ -119,7 +119,7 @@ app.get('/counter',function(req, res) {
 });
 
 
-app.get('/:articleName',function (req, res){
+app.get('article/:articleName',function (req, res){
     var articleName = req.params.articleName;
     
     
