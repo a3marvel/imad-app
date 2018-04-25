@@ -25,7 +25,7 @@ button.onclick= function() {
   };
   //Create request object
   request.open('GET','http://a3deswal.imad.hasura-app.io/counter',true);
-  reqyest.send(null);
+  request.send(null);
     
 };
 
