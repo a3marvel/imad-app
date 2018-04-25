@@ -1,6 +1,5 @@
 //counter code
 var button = document.getElementById('counter');
-var counter = 0 ; 
   
 button.onclick= function() {
   //Make a Request to the counter endpoint  
@@ -12,13 +11,20 @@ button.onclick= function() {
   //Capture the response and store in a variable
   
   request.onreadystatechange = function(){
+      if(request.readyState === XMLHttpRequest.DONE){
+          //Take SOme Action
+          if(request.status===200){
+            var counter=request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+          }
+          
+      }
       
       
-  }
-  
- //Render it into a corrrect span tag
- counter = counter + 1;
- var span = document.getElementById('count');
- span.innerHTML = counter.toString();
+  };
+  //Create request object
+  request.open('GET','http://a3deswal.imad.hasura-app.io/counter',true);
+  reqyest.send(null);
     
 };
