@@ -28,3 +28,13 @@ button.onclick= function() {
   reqyest.send(null);
     
 };
+
+//Submit name
+var nameInput = document.getElementById('name');
+var name =nameInput.value;
+var submit = document.getELementById('submit_btn');
+submit.onclick = function(){
+    //Reqst to server and send name
+    
+    //CApture a list of name
+}
